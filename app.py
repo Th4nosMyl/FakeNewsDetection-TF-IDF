@@ -61,22 +61,11 @@ st.sidebar.markdown("""
 - Η εισαγωγή τίτλων ειδήσεων να γραφεί στα Αγγλικά για καλύτερα αποτελέσματα.
 """)
 
-# Κύριο περιεχόμενο με το λογότυπο στην κορυφή
+# Κύριο περιεχόμενο
 st.markdown("<br>", unsafe_allow_html=True)  # Προσθήκη κενής γραμμής για καλύτερη εμφάνιση
 
-# Προσθήκη λογότυπου και τίτλου σε μια γραμμή
-with st.container():
-    col1, col2 = st.columns([1, 3])
-    with col1:
-        # Διαδρομή εικόνας για το λογότυπο
-        logo_path = "images/Fake News Detection App specializing in political and gossip news.jpg"  # Αντικαταστήστε με την πραγματική διαδρομή της εικόνας σας
-        if os.path.exists(logo_path):
-            st.image(logo_path, width=150)  # Ρύθμιση του πλάτους του λογότυπου
-        else:
-            # Χρήση διαδικτυακής εικόνας ως placeholder
-            st.image("https://via.placeholder.com/150", width=150)
-    with col2:
-        st.title("📰 Ανίχνευση Ψευδών Ειδήσεων με MLP")
+# Εμφάνιση μόνο του τίτλου
+st.title("📰 Ανίχνευση Ψευδών Ειδήσεων με MLP")
 
 st.markdown(
     """
